@@ -1,6 +1,6 @@
 package Funcionario;
 
-public class Funcionario {
+public class Funcionario  implements Comparable {
     private String matricula;
     private String nome;
     private String Cargo;
@@ -49,6 +49,22 @@ public class Funcionario {
        
         public String toString() {
             
-            return .toString();
+            return super.toString();
+        }
+        public int compareTo(Funcionario func){
+            if(this.matricula.compareTo(func.matricula)==0){
+                return 0;
+            }
+            else if(this.matricula.compareTo(func.matricula)>0){
+                return 1;
+
+            }
+            else{
+                return -1;
+            }
+
+        }
+        public void aumentoDeSalario(double aumento){
+            this.Salario = this.Salario+(this.Salario*aumento/100);
         }
 }
