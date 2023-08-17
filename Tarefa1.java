@@ -256,10 +256,40 @@ public class Tarefa1{
         for(int i =0;i<tam;i++){
             dataTotal[i] = data.charAt(i);
             if(Character.isDigit(dataTotal[i])){
-                if(dia=)
+                if(i<2){
+                    dia[i]=dataTotal[i];
+                }
+                else if(i>2&&i<=4){
+                    mes[i-3]=dataTotal[i];
+                }
+                else {
+                    ano1[i-6] = dataTotal[i+1];
+                }   
+            
             }
         }
+        String anoString = new String (ano1);
+        String mesString = new String (mes);
+        String diaString = new String(dia);
+        System.out.println("Dia :"+diaString+" \n"+"Mês :"+mesString+"\n"+"Ano :"+anoString);
 
+        //Questão 24:
+        System.out.println("Escreva uma cidade:");
+        String cida = sc.nextLine();
+        System.out.println("Escreva o estado para essa cidade");
+        String esta = sc.nextLine();
+        String cidaEsta = cida.concat(",".concat(esta));
+        System.out.println("Você mora em "+cidaEsta);
+
+        //Questão 25:
+        System.out.println("Escreva sua ano de nascimento: ");
+        int nascimento = sc.nextInt();
+        System.out.println("Bem-vindo ao nosso programa, nascido em".concat(nascimento+"!"));
+
+        //Questão 26:
+        System.out.println("Escreva um inteiro :");
+        
+        
 
 
 
