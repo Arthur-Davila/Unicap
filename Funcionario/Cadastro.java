@@ -7,5 +7,5 @@ public class Cadastro {
         this.funcio = new int[4];
         this.contador =  contador;
     }
-   public 
+ 
 }
